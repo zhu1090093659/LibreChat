@@ -71,8 +71,8 @@ RUN chmod -R 777 /app/data
 
 # Copy Custom Endpoints Config
 # RUN curl -o /app/librechat.yaml https://raw.githubusercontent.com/LibreChat-AI/librechat-config-yaml/main/librechat-hf.yaml
-COPY librechat.yaml /app/librechat.yaml
-COPY .env /app/.env
+RUN curl -o /app/librechat.yaml https://raw.githubusercontent.com/zhu1090093659/LibreChat/main/librechat.yaml
+RUN curl -o /app/.env https://raw.githubusercontent.com/zhu1090093659/LibreChat/main/.env
 
 
 # Install dependencies
